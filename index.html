@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-sticky-note"></i> Notes Website</h1>
+        </header>
+
+        <!-- Add Note Form -->
+        <form class="add-note" id="noteForm">
+            <input type="text" id="noteTitle" placeholder="Note title..." required>
+            <textarea id="noteContent" placeholder="Write your note..." required></textarea>
+            
+            <div class="form-actions">
+                <input type="file" id="imageUpload" accept="image/*">
+                <label for="imageUpload" class="image-btn">
+                    <i class="fas fa-image"></i> Add Image
+                </label>
+                <button type="submit">
+                    <i class="fas fa-plus"></i> Add Note
+                </button>
+            </div>
+        </form>
+
+        <!-- Notes Display -->
+        <div class="notes-grid" id="notesGrid">
+            <div class="empty-message">
+                <i class="fas fa-edit"></i>
+                <p>No notes yet. Add your first one!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
